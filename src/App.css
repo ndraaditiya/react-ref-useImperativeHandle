@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 50%;
+  border-radius: 15px;
+  padding: 15px 10px;
+  border: none;
+  background: #fff;
+  z-index: 2;
+  transition: 1s ease all;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: 2rem 0;
+}
+
+.modal-footer {
+  display: flex;
+  padding-top: 8px;
+  width: 100%;
+  gap: 10px;
+  justify-content: right;
+}
+
+.modal-footer button[type='reset'] {
+  background: salmon;
+}
