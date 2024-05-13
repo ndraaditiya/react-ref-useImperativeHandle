@@ -1,10 +1,16 @@
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import { IModalHandle } from './components/Modal/interface'
 import { Modal } from './components'
 import './App.css'
 
 function App() {
   const refModal = useRef<IModalHandle>(null)
+
+  useEffect(() => {
+    fetch(`https://ma-bridge.net:4009/getAbsensi/1160822/2024-04-20/2024-05-06`)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+  }, [])
 
   return (
     <div className='App'>
